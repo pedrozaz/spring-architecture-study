@@ -1,10 +1,10 @@
-package github.pedrozaz.springarchtecture;
+package github.pedrozaz.springarchitecture;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringArchtectureApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {
