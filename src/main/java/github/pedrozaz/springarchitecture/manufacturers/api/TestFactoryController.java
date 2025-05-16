@@ -2,7 +2,6 @@ package github.pedrozaz.springarchitecture.manufacturers.api;
 
 import github.pedrozaz.springarchitecture.manufacturers.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,7 @@ import java.io.Serializable;
 public class TestFactoryController implements Serializable {
 
     @Autowired
-    @Qualifier("turbo")
+    @Turbo
     private Motor motor;
 
     @PostMapping

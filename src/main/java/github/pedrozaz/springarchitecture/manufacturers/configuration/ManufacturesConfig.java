@@ -4,10 +4,12 @@ import github.pedrozaz.springarchitecture.manufacturers.Motor;
 import github.pedrozaz.springarchitecture.manufacturers.MotorType;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ManufacturesConfig {
 
+    @Primary
     @Bean(name = "brushed")
     public Motor motorBrushed() {
         Motor motor = new Motor();
