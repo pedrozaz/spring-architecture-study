@@ -1,6 +1,8 @@
 package github.pedrozaz.springarchitecture.todos;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestController
 @RequestMapping("/todos")
@@ -14,7 +16,12 @@ public class TodoController {
 
     @PostMapping
     public TodoEntity save(@RequestBody TodoEntity todoEntity) {
-        return this.service.save(todoEntity);
+        try {
+            return this.service.save(todoEntity);
+        }
+        catch (IllegalArgumentException e) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT);
+        }
     }
 
     @PutMapping("{id}")
