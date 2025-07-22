@@ -15,6 +15,7 @@ public class Application {
 
 		builder.profiles("production");
 		builder.bannerMode(Banner.Mode.OFF);
+		builder.lazyInitialization(false);
 
 		builder.run(args);
 
