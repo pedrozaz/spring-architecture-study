@@ -1,7 +1,16 @@
 spring:
+
   application:
     name: Spring Architecture
+
   jpa:
     show_sql: true
+
   main:
     lazy-initialization: false
+
+app:
+  manufacturers:
+    default-hp: 130
+  config:
+    variable: x

@@ -27,5 +27,6 @@ public class Application {
 		String appName = environment.getProperty("spring.application.name");
 
 		System.out.println("Application name: " + appName);
+		System.out.println(applicationContext.getBean(ValueExample.class).print());
 	}
 }

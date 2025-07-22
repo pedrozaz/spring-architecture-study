@@ -2,6 +2,7 @@ package github.pedrozaz.springarchitecture.manufacturers.configuration;
 
 import github.pedrozaz.springarchitecture.manufacturers.Motor;
 import github.pedrozaz.springarchitecture.manufacturers.MotorType;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -11,9 +12,9 @@ public class ManufacturesConfig {
 
     @Primary
     @Bean(name = "brushed")
-    public Motor motorBrushed() {
+    public Motor motorBrushed(@Value("${app.manufacturers.default-motor}") Integer hp) {
         Motor motor = new Motor();
-        motor.setHorses(120);
+        motor.setHorses(hp);
         motor.setCylinders(4);
         motor.setModel("Fast");
         motor.setLiters(2.0);
