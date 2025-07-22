@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class TestFactoryController implements Serializable {
 
     @Autowired
-    @Turbo
+    @Brushed
     private Motor motor;
 
     @PostMapping
